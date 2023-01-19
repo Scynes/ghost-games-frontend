@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Inconsolata&family=Lacquer&family=Montserrat+Alternates:wght@300&display=swap');
 
 body {
-    margin: auto;
-
+    margin: 0;
+    box-sizing: border-box;
 }
 
 h1, h3 {
-    color: rgb(255, 255, 255);
     font-family: 'Montserrat Alternates', sans-serif;
 }

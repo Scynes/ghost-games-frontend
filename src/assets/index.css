@@ -1,36 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Inconsolata&family=Lacquer&family=Montserrat+Alternates:wght@300&display=swap');
 
 :root {
+    /* background colors */
+    --bg-color-primary: rgb(88, 67, 146);
+    --bg-color-secondary: rgb(45, 33, 77);
+    --bg-color-tertiary: rgb(25, 224, 181);
+    /* text colors */
+    --text-color-primary: white;
+    --text-color-secondary: rgb(25, 224, 181);
+    --text-color-tertiary: rgb(45, 33, 77);
+    /* font families */
+    --phantom-font: 'Lacquer', cursive;
     --phantom-font-flat: 'Montserrat Alternates', sans-serif;
 }
 
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: var(--phantom-font-flat)
+    font-family: var(--phantom-font-flat);
+    color: var(--text-color-secondary);
+}
+
+body {
+    background-color: var(--bg-color-primary);
 }
 
 nav {
+    margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.182);
+    box-shadow: 0 5px 25px 0 rgb(0, 0, 0);
 }
 
-nav > a {
+a {
     cursor: pointer;
     width: 100%;
     padding: 0 10px;
+    border-radius: 5px;
     text-decoration: none;
-    color: black;
 }
 
-nav > a.right {
-    margin-left: auto;
+nav > a:hover:not(.active) {
+    background-color: rgb(64, 46, 112);
 }
 
-a:hover {
-    opacity: 0.5;
+a.active {
+    background-color: var(--bg-color-tertiary);
+    color: var(--text-color-tertiary);
+}
+
+nav > h1 {
+    font-family: var(--phantom-font);
+    font-size: 3rem;
+    margin: auto;
+    order: -1;
 }
 
 .flex-center {
@@ -43,6 +66,13 @@ a:hover {
     text-align: center;
 }
 
+.bg-color-p {
+    background-color: var(--bg-color-secondary);
+}
+
+.color-p {
+    color: var(--text-color-primary);
+}
 
 @media (min-width: 480px) {
 
@@ -50,5 +80,10 @@ a:hover {
         width: auto;
         min-width: 5rem;
         min-height: 5rem;
+    }
+
+    nav > h1 {
+        flex: 1;
+        order: 0;
     }
 }

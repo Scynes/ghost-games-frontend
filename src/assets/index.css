@@ -1,10 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Inconsolata&family=Lacquer&family=Montserrat+Alternates:wght@300&display=swap');
 
-body {
-    margin: 0;
-    box-sizing: border-box;
+:root {
+    --phantom-font-flat: 'Montserrat Alternates', sans-serif;
 }
 
-h1, h3 {
-    font-family: 'Montserrat Alternates', sans-serif;
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--phantom-font-flat)
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.182);
+}
+
+nav > a {
+    cursor: pointer;
+    width: 100%;
+    padding: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+nav > a.right {
+    margin-left: auto;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+@media (min-width: 480px) {
+
+    nav > a {
+        width: auto;
+        min-width: 5rem;
+        min-height: 5rem;
+    }
 }

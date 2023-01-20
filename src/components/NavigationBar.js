@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const NavigationBar = (props) => {
 
     return (
-        <nav className="bg-color-p">
+        <nav className="bg-color-s">
             <NavLink to='/' className="text-center flex-center">Home</NavLink>
             <NavLink to='/join' className="text-center flex-center">Join</NavLink>
             <h1 className="flex-center color-p">Ghost Games</h1>

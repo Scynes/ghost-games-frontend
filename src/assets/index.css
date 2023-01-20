@@ -41,9 +41,20 @@ body, html {
 }
 
 fieldset {
-    display: inline-block;
-    min-height: 26rem;
     max-width: 40rem;
+    padding: 20px;
+    border-style: none;
+    background-color: var(--bg-color-secondary);
+}
+
+#join-game > input {
+    margin-bottom: 20px;
+    min-width: 20rem;
+    min-height: 3rem;
+}
+
+#join-game > input:not(:first-child) {
+    margin-top: 5px;
 }
 
 nav {
@@ -74,22 +85,59 @@ nav > h1 {
     flex: 1;
 }
 
+.align-self-flex-start {
+    align-self: flex-start;
+}
+
+.bg-color-p {
+    background-color: var(--bg-color-primary);
+}
+
+.bg-color-s {
+    background-color: var(--bg-color-secondary);
+}
+
+.bg-color-t {
+    background-color: var(--bg-color-tertiary);
+}
+
+.borderless {
+    border-style: none;
+}
+
+.border-radius-10px {
+    border-radius: 10px;
+}
+
+.border-radius-5px {
+    border-radius: 5px;
+}
+
+.color-p {
+    color: var(--text-color-primary);
+}
+
+.color-t {
+    color: var(--text-color-tertiary);
+}
+
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
+.tertiary-outline {
+    outline-color: var(--bg-color-tertiary);
+    outline-style: solid;
+}
+
 .text-center {
     text-align: center;
-}
-
-.bg-color-p {
-    background-color: var(--bg-color-secondary);
-}
-
-.color-p {
-    color: var(--text-color-primary);
 }
 
 @media (min-width: 480px) {

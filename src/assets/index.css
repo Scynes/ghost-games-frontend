@@ -3,6 +3,7 @@
 :root {
     /* background colors */
     --bg-color-primary: rgb(88, 67, 146);
+    --bg-color-primary-offset: rgb(59, 41, 108);
     --bg-color-secondary: rgb(45, 33, 77);
     --bg-color-tertiary: rgb(25, 224, 181);
     /* text colors */
@@ -37,24 +38,23 @@ a.active {
 
 body, html {
     height: 100%;
-    background-color: var(--bg-color-primary);
+}
+
+body {
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--bg-color-primary-offset);
 }
 
 fieldset {
-    max-width: 40rem;
     padding: 20px;
     border-style: none;
     background-color: var(--bg-color-secondary);
 }
 
-#join-game > input {
-    margin-bottom: 20px;
-    min-width: 20rem;
-    min-height: 3rem;
-}
-
-#join-game > input:not(:first-child) {
-    margin-top: 5px;
+input::placeholder {
+    color: var(--text-color-primary);
 }
 
 nav {
@@ -69,10 +69,28 @@ nav > a:hover:not(.active) {
 }
 
 nav > h1 {
+    margin: auto;
     font-family: var(--phantom-font);
     font-size: 3rem;
-    margin: auto;
     order: -1;
+}
+
+#join-game > input {
+    margin-bottom: 20px;
+    min-width: 20rem;
+    min-height: 3rem;
+    text-transform: uppercase;
+    font-size: large;
+}
+
+#join-game > input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: var(--bg-color-primary);
+    color: var(--text-color-secondary);
+}
+
+#join-game > input:not(:first-child) {
+    margin-top: 5px;
 }
 
 #root {

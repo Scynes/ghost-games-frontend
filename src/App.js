@@ -1,5 +1,7 @@
-import Landing from "./pages/Landing";
 import NavigationBar from "./components/NavigationBar";
+import Landing from "./pages/Landing";
+import Join from "./pages/Join";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -7,9 +9,12 @@ const App = () => {
     return (
         <BrowserRouter>
             <NavigationBar />
-            <Routes>
-                <Route path="/" element={< Landing />} />
-            </Routes>
+            <div id="page-content-wrapper" className="flex-center">
+                <Routes>
+                    <Route path="/" element={< Landing />} />
+                    <Route path="/join" element={< Join />} />
+                </Routes>
+            </div>
         </BrowserRouter>
     );
 }

@@ -1,19 +1,20 @@
 import axios from "axios";
 
-const Join = () => {
+const Join = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        getGameSession(4).then(() => {
-            console.log('worked')
-        })
-    }
 
-    const getGameSession = async (roomCode) => {
+        props.changeGameStatus('waiting');
 
-        const result = await axios.get('https://api.github.com/users/xiaotian/repos');
+        setTimeout(() => {
 
-        return result;
+            axios.get('https://api.github.com/users/xiaotian/repos').then((result) => {
+
+                props.changeGameStatus('joining');
+            });
+
+        }, 3000);
     }
 
     return (

@@ -22,7 +22,6 @@
     color: var(--text-color-secondary);
 }
 
-
 a {
     cursor: pointer;
     width: 100%;
@@ -149,6 +148,15 @@ nav > h1 {
     flex-direction: column;
 }
 
+.loading {
+    font-size: 2rem;
+}
+
+.loading::after {
+    content: ' .';
+    animation: loading 1.5s infinite;
+}
+
 .tertiary-outline {
     outline-color: var(--bg-color-tertiary);
     outline-style: solid;
@@ -156,6 +164,30 @@ nav > h1 {
 
 .text-center {
     text-align: center;
+}
+
+@keyframes loading {
+
+
+    0%, 20% {
+        color: white;
+        text-shadow: .35em 0 0 rgba(0,0,0,0), .8em 0 0 rgba(0, 0, 0, 0);
+    }
+    
+    30% {
+        color: white;
+        text-shadow: .35em 0 0 white, .8em 0 0 rgba(0, 0, 0, 0);
+    }
+
+    50% {
+        color: white;
+        text-shadow: .35em 0 0 white, .8em 0 0 rgb(0, 0, 0, 0);
+    }
+
+    70% {
+        color: white;
+        text-shadow: .35em 0 0 white, .7em 0 0 white;
+    }
 }
 
 @media (min-width: 480px) {
@@ -169,5 +201,9 @@ nav > h1 {
     nav > h1 {
         flex: 1;
         order: 0;
+    }
+
+    .loading {
+        font-size: 4rem;
     }
 }

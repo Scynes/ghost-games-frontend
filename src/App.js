@@ -9,7 +9,7 @@ const App = () => {
     return (
         <BrowserRouter>
             <NavigationBar />
-            <div id="page-content-wrapper" className="flex-center">
+            <div id="page-content-wrapper" className="flex-center flex-column">
                 <Routes>
                     <Route path="/" element={< Landing />} />
                     <Route path="/join" element={< Join />} />

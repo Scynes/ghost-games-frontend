@@ -1,6 +1,6 @@
 import NavigationBar from "./components/NavigationBar";
 import Landing from "./pages/Landing";
-import Join from "./pages/Join";
+import Join from "./pages/Game";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

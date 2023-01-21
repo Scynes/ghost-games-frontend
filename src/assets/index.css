@@ -78,21 +78,20 @@ nav > h1 {
     height: 100%;
 }
 
-#join-game > input {
+input {
     margin-bottom: 20px;
-    min-width: 20rem;
     min-height: 3rem;
     text-transform: uppercase;
     font-size: large;
 }
 
-#join-game > input[type="submit"]:hover {
+input[type="submit"]:hover {
     cursor: pointer;
     background-color: var(--bg-color-primary);
     color: var(--text-color-secondary);
 }
 
-#join-game > input:not(:first-child) {
+input:not(:first-child) {
     margin-top: 5px;
 }
 
@@ -209,5 +208,8 @@ nav > h1 {
 
     .loading {
         font-size: 4rem;
+    }
+
+    #login-signup-wrapper {
     }
 }

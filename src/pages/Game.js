@@ -6,7 +6,6 @@ const Game = () => {
 
     const [gameStatus, setGameStatus] = useState({
         status: 'join',
-        connectionInfo: null,
         connectedSocket: null,
     })
 

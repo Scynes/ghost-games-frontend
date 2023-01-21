@@ -8,7 +8,10 @@ const Joining = (props) => {
 
         SOCKET.on('user connect', () => {
             
-            SOCKET.emit('join game', props.gameStatus.room);
+            SOCKET.emit('join game', {
+                room: props.gameStatus.room,
+                displayName: props.gameStatus.displayName
+            });
         });
 
         SOCKET.on('joined', () => {
@@ -30,7 +33,7 @@ const Joining = (props) => {
                 props.changeGameStatus({
                     status: 'nosession'
                 });
-                
+
             }, 2000);
         });
     });

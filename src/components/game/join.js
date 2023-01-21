@@ -1,22 +1,13 @@
-import axios from "axios";
-
-
-
 const Join = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        props.changeGameStatus('joining');
-
-        setTimeout(() => {
-
-            axios.get('https://api.github.com/users/xiaotian/repos').then((result) => {
-
-                props.changeGameStatus('playing');
-            });
-
-        }, 3000);
+        props.changeGameStatus({ 
+            status: 'joining', 
+            room: document.getElementById('join-game').room.value,
+            displayName: document.getElementById('join-game').display.value
+        });
     }
 
     return (

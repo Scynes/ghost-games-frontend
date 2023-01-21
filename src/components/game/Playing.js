@@ -1,12 +1,10 @@
-
-
-const Playing = () => {
+const Playing = (props) => {
 
     return (
         <main id="game-content">
             
         </main>
-    )
+    );
 }
 
 export default Playing;

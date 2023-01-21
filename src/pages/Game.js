@@ -1,38 +1,36 @@
-import { Join, Playing, Waiting } from "../components/game";
+import { Join, Playing, Joining } from "../components/game";
 
-
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Game = () => {
 
-    const [status, setStatus] = useState('join');
+    const [gameStatus, setGameStatus] = useState({
+        status: 'join',
+        connectionInfo: null,
+        connectedSocket: null,
+    })
 
-    const changeGameStatus = (code) => setStatus(code); 
+    const changeGameStatus = status => {
 
-    useEffect(() => {
-
-        
-
-    }, []);
-
-    console.log(status);
+        setGameStatus({...Object.assign(gameStatus, status)})
+    };
 
     const getGameStatusRender = () => {
-        switch (status) {
+
+        switch (gameStatus.status) {
 
             case 'playing':
-                return <Playing changeGameStatus={changeGameStatus}/>;
+                return <Playing changeGameStatus={changeGameStatus} gameStatus={gameStatus}/>;
 
             case 'joining':
-                return <Waiting changeGameStatus={changeGameStatus}/>;
-
+                return <Joining changeGameStatus={changeGameStatus} gameStatus={gameStatus}/>;
 
             case 'join':
             default:
                 return (
                 <>
                     <Join changeGameStatus={changeGameStatus}/>
-                    {status === 'nosession' ? <h1 style={{"marginTop": "10px"}}>No Session Found!</h1> : ''}
+                    {gameStatus.status === 'nosession' ? <h1 style={{"marginTop": "10px"}}>No Session Found!</h1> : ''}
                 </>
                 );
         }

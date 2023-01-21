@@ -2,13 +2,13 @@
 
 :root {
     /* background colors */
-    --bg-color-primary: rgb(88, 67, 146);
-    --bg-color-primary-offset: rgb(59, 41, 108);
-    --bg-color-secondary: rgb(45, 33, 77);
-    --bg-color-tertiary: rgb(25, 224, 181);
+    --bg-color-primary: rgb(49, 36, 134);
+    --bg-color-primary-offset: rgb(36, 26, 98);
+    --bg-color-secondary: rgb(14, 89, 164);
+    --bg-color-tertiary: rgb(0, 234, 255);
     /* text colors */
     --text-color-primary: white;
-    --text-color-secondary: rgb(25, 224, 181);
+    --text-color-secondary: rgb(0, 255, 229);
     --text-color-tertiary: rgb(45, 33, 77);
     /* font families */
     --phantom-font: 'Lacquer', cursive;
@@ -26,13 +26,13 @@ a {
     cursor: pointer;
     width: 100%;
     padding: 0 10px;
-    border-radius: 5px;
     text-decoration: none;
 }
 
 a.active {
     background-color: var(--bg-color-tertiary);
     color: var(--text-color-tertiary);
+    border-radius: 5px;
 }
 
 body, html {
@@ -40,7 +40,7 @@ body, html {
 }
 
 body {
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+    background-image: url('/public/images/bg-strokes.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--bg-color-primary-offset);
@@ -64,12 +64,11 @@ nav {
 }
 
 nav > a:hover:not(.active) {
-    background-color: rgb(64, 46, 112);
+    background-color: var(--bg-color-primary-offset);
 }
 
 nav > h1 {
     margin: auto;
-    font-family: var(--phantom-font);
     font-size: 3rem;
     order: -1;
 }

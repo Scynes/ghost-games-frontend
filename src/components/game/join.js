@@ -1,17 +1,19 @@
 import axios from "axios";
 
+
+
 const Join = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        props.changeGameStatus('waiting');
+        props.changeGameStatus('joining');
 
         setTimeout(() => {
 
             axios.get('https://api.github.com/users/xiaotian/repos').then((result) => {
 
-                props.changeGameStatus('joining');
+                props.changeGameStatus('playing');
             });
 
         }, 3000);
@@ -19,7 +21,7 @@ const Join = (props) => {
 
     return (
         <fieldset className="border-radius-10px">
-            <legend className="text-center"><h1>Join Game</h1></legend>
+            <legend className="text-center"><h2>Join Game</h2></legend>
             <form id="join-game" className="flex-center flex-column" onSubmit={handleSubmit}>
                 <label className="align-self-flex-start" htmlFor="room-code">Room</label>
                 <input id="room-code" name="room" className="borderless border-radius-5px bg-color-p tertiary-outline text-center" type="text" placeholder="ENTER ROOM CODE"/>

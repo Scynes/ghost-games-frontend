@@ -112,6 +112,11 @@ input:not(:first-child) {
 #login-signup-wrapper {
     max-height: 30rem;
     overflow: hidden;
+    transition: all .05s ease-in;
+}
+
+#login-signup-wrapper:not(:hover) {
+    transition: all .5s ease-in;
 }
 
 #login-container > form, #signup-container > form {
@@ -206,6 +211,8 @@ input:not(:first-child) {
 
 .trans-shadowcast {
     background: rgba(14, 89, 164, 0.65);
+    outline-style: solid;
+    outline-color: #C36D00;
     box-shadow: 1rem 1rem 2rem 10px rgb(0, 0, 0);
 }
 

@@ -4,7 +4,7 @@ import IO from 'socket.io-client';
 const Joining = (props) => {
 
     useEffect(() => {
-        const SOCKET = IO('http://localhost:3000');
+        const SOCKET = IO('https://ghost-games.herokuapp.com');
 
         SOCKET.on('user connect', () => {
             
